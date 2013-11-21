@@ -6,10 +6,13 @@
 
 package com.example.simplejsf.domain;
 
+import javax.faces.bean.ManagedBean;
+
 /**
  *
  * @author aleksander
  */
+@ManagedBean
 public class Footballer {
     
     private int id;

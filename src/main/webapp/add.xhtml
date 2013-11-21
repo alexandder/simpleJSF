@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/templates/default.xhtml">
+
+    <ui:define name="content">
+        <h:form id="footballerform">
+            <h:panelGrid columns="2">
+                <h:outputText value="#{msgs.name}"></h:outputText>
+                <h:inputText id="name" value="#{footballer.name}" />
+
+                <h:outputText value="#{msgs.lastName}"></h:outputText>
+                <h:inputText id="lastName" value="#{footballer.lastName}" />
+
+                <h:outputText value="#{msgs.numberOfCaps}"></h:outputText>
+                <h:inputText id="numberOfCaps" value="#{footballer.numberOfCaps}" />
+
+                <h:outputText value="#{msgs.avarageNumberOfGoals}"></h:outputText>
+                <h:inputText id="avarageNumberOfGoals" value="#{footballer.avarageNumberOfGoals}"/>
+
+                <h:outputText value="#{msgs.isInjured}"></h:outputText>
+                <h:inputText id="isInjured" value="#{footballer.isInjured}"/>
+            </h:panelGrid>
+
+            <h:commandButton value="#{msgs.addFootballerSubmit}" action="#{footballerManager.addFootballer}">
+            </h:commandButton>
+            
+            <h:panelGrid>
+                <h:messages showDetail="#{true}" showSummary="#{false}" />
+            </h:panelGrid>
+        </h:form>
+
+    </ui:define>
+</ui:composition>

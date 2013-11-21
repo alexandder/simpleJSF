@@ -10,22 +10,27 @@ import com.example.simplejsf.domain.Footballer;
 import java.util.ArrayList;
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author aleksander
  */
 @ApplicationScoped
+@ManagedBean
 public class FootballerManager {
     private List<Footballer> footballers;
+    private static int id;
     
     public FootballerManager() {
         footballers = new ArrayList<>();
+        id = 0;
     }
     
     public void addFootballer(Footballer footballer) {
         Footballer newFootballer = new Footballer();
-        newFootballer.setId(footballer.getId());
+        id++;
+        newFootballer.setId(id);
         newFootballer.setName(footballer.getName());
         newFootballer.setLastName(footballer.getLastName());
         newFootballer.setNumberOfCaps(footballer.getNumberOfCaps());
