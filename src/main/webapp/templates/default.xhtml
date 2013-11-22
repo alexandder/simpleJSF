@@ -18,7 +18,9 @@ and open the template in the editor.
     <h:body>
         <h:outputStylesheet library="css" name="default.css" />
         <div class="heading">
-            <ui:insert>#{msgs.title}</ui:insert>
+            <ui:insert>
+                <ui:include src="/views/main/heading.xhtml" />
+            </ui:insert>
         </div>
         
         <div class="menu">

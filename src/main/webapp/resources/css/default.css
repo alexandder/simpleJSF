@@ -12,7 +12,8 @@ body {
 }
 
 .heading {
-    background-color: #ffdcd6;
+    font-size: 20px;
+    background-color: #5edd0c;
     width: 1000px;
     height: 200px;
     margin-top: 30px;
