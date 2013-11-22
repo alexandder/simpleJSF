@@ -13,15 +13,32 @@ and open the template in the editor.
 
     <ui:define name="content">
         <h:form>
-            <h:dataTable value="#{footballerManager.footballers}" var="item">
+            <h:dataTable value="#{footballerBean.footballers}" var="item">
+                
+                <h:column>
+                    <f:facet name="header">#{msgs.id}</f:facet>
+                        #{item.id}
+                </h:column>
                 <h:column>
                     <f:facet name="header">#{msgs.name}</f:facet>
                         #{item.name}
                 </h:column>
 
                 <h:column>
+                    <f:facet name="header">#{msgs.lastName}</f:facet>
+                        #{item.lastName}
+                </h:column>
+                <h:column>
                     <f:facet name="header">#{msgs.numberOfCaps}</f:facet>
                         #{item.numberOfCaps}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">#{msgs.avarageNumberOfGoals}</f:facet>
+                        #{item.avarageNumberOfGoals}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">#{msgs.isInjured}</f:facet>
+                        #{item.isInjured}
                 </h:column>
             </h:dataTable>
         </h:form>

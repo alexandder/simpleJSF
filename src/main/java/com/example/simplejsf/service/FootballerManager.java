@@ -17,7 +17,6 @@ import javax.faces.bean.ManagedBean;
  * @author aleksander
  */
 @ApplicationScoped
-@ManagedBean
 public class FootballerManager {
     private List<Footballer> footballers;
     private static int id;

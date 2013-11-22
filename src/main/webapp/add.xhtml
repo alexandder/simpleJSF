@@ -15,22 +15,22 @@ and open the template in the editor.
         <h:form id="footballerform">
             <h:panelGrid columns="2">
                 <h:outputText value="#{msgs.name}"></h:outputText>
-                <h:inputText id="name" value="#{footballer.name}" />
+                <h:inputText id="name" value="#{footballerBean.footballer.name}" />
 
                 <h:outputText value="#{msgs.lastName}"></h:outputText>
-                <h:inputText id="lastName" value="#{footballer.lastName}" />
+                <h:inputText id="lastName" value="#{footballerBean.footballer.lastName}" />
 
                 <h:outputText value="#{msgs.numberOfCaps}"></h:outputText>
-                <h:inputText id="numberOfCaps" value="#{footballer.numberOfCaps}" />
+                <h:inputText id="numberOfCaps" value="#{footballerBean.footballer.numberOfCaps}" />
 
                 <h:outputText value="#{msgs.avarageNumberOfGoals}"></h:outputText>
-                <h:inputText id="avarageNumberOfGoals" value="#{footballer.avarageNumberOfGoals}"/>
+                <h:inputText id="avarageNumberOfGoals" value="#{footballerBean.footballer.avarageNumberOfGoals}"/>
 
                 <h:outputText value="#{msgs.isInjured}"></h:outputText>
-                <h:inputText id="isInjured" value="#{footballer.isInjured}"/>
+                <h:inputText id="isInjured" value="#{footballerBean.footballer.isInjured}"/>
             </h:panelGrid>
 
-            <h:commandButton value="#{msgs.addFootballerSubmit}" action="#{footballerManager.addFootballer}">
+            <h:commandButton value="#{msgs.addFootballerSubmit}" action="#{footballerBean.addFootballer}">
             </h:commandButton>
             
             <h:panelGrid>
